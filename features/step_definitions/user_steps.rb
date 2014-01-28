@@ -18,7 +18,8 @@ end
 Given /^a User has posted the following messages:$/ do |messages|
   user = FactoryGirl.create(:user)
   messages_attributes = messages.hashes.map do |message_attrs| 
-    message_attrs.merge({:user => user})
+    # message_attrs.merge({:user => user})
+    message_attrs.merge({:user_id => user})
   end
   Message.create!(messages_attributes)
 end
