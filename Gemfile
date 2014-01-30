@@ -36,6 +36,7 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+gem 'debugger' unless ENV["RM_INFO"]
 
 #START:focus
 group :test do
@@ -43,5 +44,10 @@ group :test do
   gem 'rspec-rails', '2.11.0'
   gem 'database_cleaner', '0.8.0'
   gem 'factory_girl', '3.5.0'
+  gem 'selenium-webdriver'
+  #gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'linecache19', '>= 0.5.13' #, :git => 'https://github.com/robmathews/linecache19-0.5.13.git'
+  gem 'ruby-debug-base19x', '>= 0.11.30.pre10'
+  gem 'ruby-debug-ide', '>= 0.4.17.beta14'
 end
 #END:focus
